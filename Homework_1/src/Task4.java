@@ -113,6 +113,8 @@ public class Task4
 			// -- -- --
 		}
 		else System.out.println("Error");
+		
+		scan.close();
 	}
 
 }

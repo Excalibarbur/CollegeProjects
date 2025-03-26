@@ -36,6 +36,8 @@ public class Task5
 			default:
 				// They didn't told me anything about "Error" msg :/
 		}
+		
+		scan.close();
 	}
 
 }
