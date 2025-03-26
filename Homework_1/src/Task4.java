@@ -29,32 +29,90 @@ public class Task4
 
 	public static void main(String[] args)
 	{
-		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("Enter a three-digit number: ");
 		int num = scan.nextInt();
-		if(num / 100 >= 1 && num / 100 < 10)
+		if(num >= 100 && num < 1000)
 		{
-			// need to work on
-			/*while(true)
-			{
-				scan:
-					if(num / 200 >= 1)
-					{
-						System.out.printf("%d Note(s) of 200.0", (num % 200));
-						num = num % 200; // update num to its delta
-						break scan;
-						
-					}
-					else if(num / 100 >= 1)
-					{
-						int delta = num % 100;
-					}
-			}*/
+			int is200 = (num / 200);
+			System.out.printf("%d Note(s) of 200.0\n", is200);
+			
+			if(is200 >= 1)
+				num = num % 200; // update - delta
+			
+			
+			// -- -- --
+			
+			
+			int is100 = (num / 100);
+			System.out.printf("%d Note(s) of 100.0\n", is100);
+
+			if(is100 >= 1)
+				num = num % 100; // delta
+			
+			
+			// -- -- --
+			
+			
+			int is50 = (num / 50);
+			System.out.printf("%d Note(s) of 50.0\n", is50);
+
+			if(is50 >= 1)
+				num = num % 50; // delta
+			
+			
+			// -- -- --
+			
+			
+			int is20 = (num / 20);
+			System.out.printf("%d Note(s) of 20.0\n", is20);
+
+			if(is20 >= 1)
+				num = num % 20; // delta
+
+			
+			// -- -- --
+			
+			
+			int is10 = (num / 10);
+			System.out.printf("%d Note(s) of 10.0\n", is10);
+
+			if(is10 >= 1)
+				num = num % 10; // delta
+			
+			
+			// -- -- --
+			
+			
+			int is5 = (num / 5);
+			System.out.printf("%d Note(s) of 5.0\n", is5);
+
+			if(is5 >= 1)
+				num = num % 5; // delta
+			
+			
+			// -- -- --
+			
+			
+			int is2 = (num / 2);
+			System.out.printf("%d Note(s) of 2.0\n", is2);
+			
+			if(is2 >= 1)
+				num = num % 2; // delta
+			
+			
+			// -- -- --
+			
+			
+			int is1 = (num / 1);
+			System.out.printf("%d Note(s) of 1.0\n", is1);
+			// No need to update the delta
+			
+			
+			// -- -- --
 		}
-		else
-			System.out.println("Error");
+		else System.out.println("Error");
 	}
 
 }
