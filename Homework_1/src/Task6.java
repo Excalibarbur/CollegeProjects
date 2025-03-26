@@ -92,7 +92,8 @@ public class Task6
 		
 		if(isSetEqual)
 			System.out.println("Both numbers are composed of identical digits.");
-		else System.out.println("The numbers are composed of different digits.");
+		else
+			System.out.println("The numbers are composed of different digits.");
 		
 		scan.close();
 	}
