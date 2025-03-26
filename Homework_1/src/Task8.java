@@ -90,6 +90,7 @@ public class Task8
 		if(!atleastOne)
 			System.out.println("No Armstrong numbers in this range");
 		
+		scan.close();
 	}
 
 }
