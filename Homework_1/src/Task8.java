@@ -15,11 +15,11 @@ public class Task8
 	{
 		Scanner scan = new Scanner(System.in);
 		
-		boolean bValid = false;
+		boolean valid = false;
 		int lowerBound = 0, upperBound = 0;
 		int tries = 0;
 		
-		while(!bValid)
+		while(!valid)
 		{
 			System.out.print("Enter the lower and upper bound for numbers: ");
 			lowerBound = scan.nextInt();
@@ -36,13 +36,14 @@ public class Task8
 					 * אז התוכנית תפסיק לקבל קלט ותוציא הודעה שגיאה ותסיים.
 					*/
 					System.out.println("Error, tried 3 times, exiting...");
-					return; // Program exit (?)
+					scan.close();
+					return; // Program exit (Should I ? according to the instructions ?)
 				}
 				else // Regular error message according to the conditions.
 					System.out.println("Error, please try again");
 			}
 			else // If there's no error, change the variable so the loop would end.
-				bValid = true;
+				valid = true;
 		}
 		
 		
@@ -75,7 +76,9 @@ public class Task8
 			
 			
 			// Condition checks: "N" must be above 0 && (second + third) conditions, which are - combined.
-			if((N > 0) && (sum_total == currentNumber))
+			boolean firstCondition = (N > 0); // Is this relevant ? because the first Armstrong number is 0... (thought N number-group not always starts with a zero)
+			firstCondition = true; // I've set the first condition to be always true because 0 it's part of the Armstrong numbers.
+			if(firstCondition && (sum_total == currentNumber))
 			{
 				if(!avoidFirstComma)
 					avoidFirstComma = true;
