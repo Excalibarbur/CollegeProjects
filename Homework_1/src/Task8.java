@@ -77,7 +77,7 @@ public class Task8
 			
 			// Condition checks: "N" must be above 0 && (second + third) conditions, which are - combined.
 			boolean firstCondition = (N > 0); // Is this relevant ? because the first Armstrong number is 0... (thought N number-group not always starts with a zero)
-			firstCondition = true; // I've set the first condition to be always true because 0 it's part of the Armstrong numbers.
+			firstCondition = (N >= 0); // I've set the first condition to include 0 because it's part of the Armstrong numbers. (Until I'll get my answer)
 			if(firstCondition && (sum_total == currentNumber))
 			{
 				if(!avoidFirstComma)
