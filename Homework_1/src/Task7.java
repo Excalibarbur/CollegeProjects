@@ -18,7 +18,7 @@ public class Task7
 			if(n >= 1 && n <= 9)
 				valid_n = true;
 			else
-				System.out.println("Error: Please enter a positive integer greater than 0.");
+				System.out.println("Error: Please enter a positive integer greater than 0 and less than 10.");
 		}
 		
 		
