@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+/*
+ * I've avoided the use of "return;" function, because it wasn't included in our previous class.
+*/
+
 public class Task8
 {
 
@@ -9,6 +13,7 @@ public class Task8
 		
 		int lowerBound = 0, upperBound = 0;
 		int tries = 0;
+		final int MAX_TRIES = 3;
 		
 		// Switched to while-"true" because I depending on "break"-s.
 		while (true)
@@ -22,7 +27,7 @@ public class Task8
 			{
 				// Increase "tries" by one - after fail.
 				tries++;
-				if(tries == 3) // Compare "tries" to "3", in-case "tries" will reach to 3, break the while loop.
+				if(tries == MAX_TRIES) // Compare "tries" to "3", in-case "tries" will reach to 3, break the while loop.
 					break;
 				else // Regular error message according to the conditions.
 					System.out.println("Error, please try again");
@@ -32,7 +37,7 @@ public class Task8
 		}
 		
 		// If the "tries" will reach 3 - exit.
-		if(tries == 3)
+		if(tries == MAX_TRIES)
 			System.out.println("Error, tried 3 times, exiting...");
 		else // Inputs are valid with no errors - start script.
 		{
