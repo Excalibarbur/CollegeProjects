@@ -13,6 +13,7 @@ import java.util.Scanner;
  *
  * Enter a three-digit number: 42
  * Error
+ * 
 */
 
 
@@ -20,7 +21,6 @@ import java.util.Scanner;
  * Conditions:
  * 	1. Must be 3 digit number
  *  2. Valid splits are: 1, 2, 5, 10, 20, 50, 100, 200
- *  
  *  
  */
 
