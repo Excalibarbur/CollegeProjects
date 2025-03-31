@@ -84,6 +84,8 @@ public class Task8
 			
 			if(!atleastOne)
 				System.out.println("No Armstrong numbers in this range");
+			else
+				System.out.println(""); // adds a new line after printing the results
 		}
 		
 		scan.close();
