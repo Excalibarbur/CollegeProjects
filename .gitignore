@@ -1,4 +1,10 @@
-.metadata/
+# Ignore System-files
 .DS_Store
+
+# Ignore project-files
+.metadata/
 bin/
+*.class
+
+# Special ignore
 ClassExercise/
