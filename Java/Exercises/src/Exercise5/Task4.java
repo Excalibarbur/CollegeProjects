@@ -1,43 +1,44 @@
 package Exercise5;
 import java.util.Scanner;
 
-// I code it like garbage but idk, its works
+// I've updated it to a better looking code :>
 
 public class Task4
 {
-
-	public static void printTriangle(int x)
+	
+	public static void printTriangleVisually(int spaces, int stars)
 	{
-		boolean flipped = false;
+		for(int j = 0; j < spaces; j++)
+			System.out.print(" ");
+		for(int j = 0; j < stars; j++)
+			System.out.print("*");
+		System.out.println("");
+	}
+
+	public static void printTriangle(int startPoint)
+	{
+		int max = startPoint * 2 - 1;
 		int stars = 1;
-		int index = x;
-		int max = x * 2 - 1;
+		boolean switchUp = false;
 		
-		while(true)
+		for(int i = startPoint; i < (max * 2 + 1); i++)
 		{
-			int spaces = index - stars;
+			// max - i = spaces
+			// 5 - 3 = 2
+			// 5 - 4 = 1
+			// 5 - 5 = 0
+			// 5 - 6 = -1
+			// 5 - 7 = -2
 			
-			for(int j = 0; j < spaces; j++)
-				System.out.print(" ");
-			for(int j = 0; j < stars; j++)
-				System.out.print("*");
-			System.out.println("");
+			int spaces = Math.abs(max - i);
+			printTriangleVisually(spaces, stars);
 			
 			if(stars == max)
-				flipped = true;
+				switchUp = true;
 			
-			if(!flipped)
-			{
-				index++;
+			if(!switchUp)
 				stars += 2;
-			}
-			else 
-			{
-				index--;
-				if(stars == 1)
-					break;
-				else stars -= 2;
-			}
+			else stars -= 2;
 		}
 	}
 	
