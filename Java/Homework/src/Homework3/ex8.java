@@ -32,11 +32,17 @@ public class ex8
 	{
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.print("Enter a string: ");
-		String str = scan.nextLine();
-
-		int res = charCalc(str);
-		System.out.printf("%s -> %s\n", str, res);
+		while(true)
+		{
+			System.out.print("Enter a string: ");
+			String str = scan.nextLine();
+			
+			if(str.compareTo("exit") == 0)
+				break;
+			
+			int res = charCalc(str);
+			System.out.printf("%s -> %s\n", str, res);
+		}
 		
 		scan.close();
 	}

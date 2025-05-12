@@ -122,7 +122,11 @@ public class ex4
 			
 			// Commit mark
 			matrix[row-1][col-1] = currentPlayer;
-
+			
+			
+			// Increase move-count
+			moves++;
+			
 			
 			// Print Matrix
 			System.out.println("The table result:");
@@ -137,15 +141,14 @@ public class ex4
 				break;
 			}
 			
+			// Check if tie
+			if(moves == MAX_MOVES)
+				System.out.println("Tie !");
 			
 			// Switch Players
 			if(currentPlayer == 1)
 				currentPlayer = 2;
-			else currentPlayer = 1;
-
-			
-			// Increase move-count
-			moves++;
+			else currentPlayer = 1;	
 		}
 //		System.out.println("[END]"); // End of game
 		
