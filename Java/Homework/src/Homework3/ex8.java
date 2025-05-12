@@ -4,11 +4,10 @@ import java.util.Scanner;
 public class ex8
 {
 	
-	public static int TheFunc(String input)
+	public static int charCalc(String input)
 	{
 		final int ALPHABET_LEN = 26;
 		int res = 0;
-		
 		
 		String str_arr[] = input.split("");
 		for(int i = 0; i < str_arr.length; i++)
@@ -36,7 +35,7 @@ public class ex8
 		System.out.print("Enter a string: ");
 		String str = scan.nextLine();
 
-		int res = TheFunc(str);
+		int res = charCalc(str);
 		System.out.printf("%s -> %s\n", str, res);
 		
 		scan.close();

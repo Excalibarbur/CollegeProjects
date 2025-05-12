@@ -8,11 +8,7 @@ public class ex3
 	{
 		if(num == 1)
 			return true;
-		
-//		else if(num < 1)
-//			return false;
-		
-		// else:
+
 		for(int i = num - 1; i != 1; i--)
 		{
 			if(num % i == 0)
@@ -60,7 +56,7 @@ public class ex3
 					if(!isPrime(row[j]))
 					{
 						allPrimes = false;
-						break;
+						break; // break from the line-loop
 					}
 				}
 			}
@@ -70,13 +66,10 @@ public class ex3
 				int last = row[row.length - 1];
 				
 				if(!isPrime(first) || !isPrime(last))
-				{
 					allPrimes = false;
-					break; // dont really needs that here
-				}
 			}
 			
-			if(!allPrimes)
+			if(allPrimes == false)
 				break;
 		}
 		

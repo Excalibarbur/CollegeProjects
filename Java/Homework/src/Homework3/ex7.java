@@ -4,15 +4,8 @@ import java.util.Scanner;
 public class ex7
 {
 
-	public static String[] TheFunc(String[] arr, String str)
+	public static String[] findPrevInDict(String[] arr, String str)
 	{
-		// need a sorting mech
-		/*
-			"hello" = "h" "e" "l" "l" "o"
-			
-			like say but summer call world
-		*/
-		
 		int size = 0;
 		for(String word : arr)
 		{
@@ -43,15 +36,13 @@ public class ex7
 		
 		
 		String words[] = new String[arr_size];
-		int count = 0;
-		
 		System.out.print("Enter words: ");
-		while(count < arr_size)
+		for(int i = 0; i < arr_size; i++)
 		{
 			String input = scan.next();
-			words[count] = input;
-			count++;
+			words[i] = input;
 		}
+		
 		
 		scan.nextLine(); // Clean buffer
 		
@@ -59,10 +50,10 @@ public class ex7
 		System.out.print("Enter a string: ");
 		String str = scan.next();
 
-		String[] res_arr = TheFunc(words, str);
-		String res = String.join(", ", res_arr);
+		String[] result_arr = findPrevInDict(words, str);
+		String result = String.join(", ", result_arr);
 		
-		System.out.printf("The words which should appear before \"%s\" on the dictionary are: %s", str, res);
+		System.out.printf("The words which should appear before \"%s\" on the dictionary are: %s", str, result);
 		
 		scan.close();
 	}

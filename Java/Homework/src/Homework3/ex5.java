@@ -26,13 +26,6 @@ public class ex5
 	
 	public static void main(String[] args)
 	{
-		/*
-		[0] = CAPITAL
-		[1] = lower case
-		[2] = Numbers
-		[3] = Special Characters
-		
-		*/
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("Enter a string: ");
@@ -43,7 +36,6 @@ public class ex5
 		System.out.println("Lower case letters: " + result[1]);
 		System.out.println("Numbers: " + result[2]);
 		System.out.println("Special Characters: " + result[3]);
-		
 		
 		scan.close();
 	}

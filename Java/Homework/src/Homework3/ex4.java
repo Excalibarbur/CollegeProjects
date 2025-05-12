@@ -30,15 +30,11 @@ public class ex4
 	public static int whoWon(int[][] matrix)
 	{
 		/*
+		
 		x x x
 		x _ _
 		x _ _
 		
-		for (row in matrix):
-			row[0] && row[1] && row[2]
-		
-		for(int col = 0; i < 3; i++)
-			matrix[0][i] && matrix[1][i] && matrix[2][i]
 		*/
 		
 		for (int[] row : matrix)
@@ -56,14 +52,13 @@ public class ex4
 			else if(matrix[0][col] == 2 && matrix[1][col] == 2 && matrix[2][col] == 2)
 				return 2;
 		}
-			
+		
 		
 		/*
+		
 		x _ _
 		_ x _
 		_ _ x
-		
-		matrix[0][0] && matrix[1][1] && matrix[2][2]
 		
 		*/
 		
@@ -73,15 +68,14 @@ public class ex4
 			return 2;
 		
 		
+		
 		/*
+		
 		_ _ x
 		_ x _
 		x _ _
 		
-		matrix[0][2] && matrix[1][1] && matrix[2][0]
-		
 		*/
-		
 
 		if(matrix[0][2] == 1 && matrix[1][1] == 1 && matrix[2][0] == 1)
 			return 1;
@@ -106,34 +100,34 @@ public class ex4
 		System.out.println("The table result:");
 		printMatrix(matrix);
 		
-		while(true)
+		while(moves < MAX_MOVES)
 		{
 			System.out.printf("\nEnter row and column for player %s: ", (currentPlayer == 1 ? 'x' : 'o'));
-
-//			System.out.print("Enter row: ");
 			int row = scan.nextInt();
-//			System.out.print("Enter column: ");
 			int col = scan.nextInt();
 			
-			//row > matrix[0].length-1 || row < 0 || col > matrix.length-1 || col < 0
+			
 			if(row > 3 || row < 1 || col > 3 || col < 1)
 			{
-				System.out.println("[ERROR] The current selection is out-of-bounds ! Please try again.\n");
+				System.out.println("[ERROR] The current selection is out-of-bounds ! Please try again.");
 				continue;
 			}
 			
 			if(matrix[row-1][col-1] != 0)
 			{
-				System.out.println("[ERROR] The current selection is already marked ! Please try again.\n");
+				System.out.println("[ERROR] The current selection is already marked ! Please try again.");
 				continue;
 			}
+			
 			
 			// Commit mark
 			matrix[row-1][col-1] = currentPlayer;
 
+			
 			// Print Matrix
 			System.out.println("The table result:");
 			printMatrix(matrix);
+			
 			
 			// Need to check here if won
 			int winner = whoWon(matrix);
@@ -143,19 +137,17 @@ public class ex4
 				break;
 			}
 			
+			
 			// Switch Players
 			if(currentPlayer == 1)
 				currentPlayer = 2;
 			else currentPlayer = 1;
+
 			
-			// If all spaces are taken
+			// Increase move-count
 			moves++;
-			if(moves > MAX_MOVES-1)
-			{
-				System.out.println("TIE");
-				break;
-			}
 		}
+//		System.out.println("[END]"); // End of game
 		
 		scan.close();
 		

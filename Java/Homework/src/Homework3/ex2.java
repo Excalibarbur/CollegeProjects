@@ -10,8 +10,10 @@ public class ex2
 		{
 			int count = 0;
 			for(int i = input; i != 0; i--)
+			{
 				if(input % i == 0)
 					count++;
+			}
 			
 			return count;
 		}

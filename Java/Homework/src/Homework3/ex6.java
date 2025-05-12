@@ -46,6 +46,7 @@ public class ex6
 		int words_found = countWords(str_arr, sentence);
 		System.out.printf("The amount of words that present in a sentence: %d\n", words_found);
 		
+		
 		scan.close();
 	}
 
