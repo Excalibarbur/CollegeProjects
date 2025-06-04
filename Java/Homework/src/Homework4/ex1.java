@@ -3,28 +3,23 @@ package Homework4;
 public class ex1
 {
 	
-	public static int findMax(int arr[])
+	public static int findMax(int arr[], int index, int lastMax)
 	{
-		int max = Integer.MIN_VALUE;
-		if(arr.length != 1)
-		{
-			// Create new array, so it will be acted like a pop functions in other languages
-			int newArr[] = new int[arr.length - 1];
-			for(int i = 0; i < arr.length - 1; i++)
-				newArr[i] = arr[i];
-			
-			// Recall the function until it will be 1 in length
-			max = findMax(newArr);
-		}
+		if(index == arr.length)
+			return lastMax;
 		
-		// Most left integer in the current array
-		int mostLeftDigit = arr[arr.length - 1];
-		if(mostLeftDigit > max)
-			max = mostLeftDigit; // Update the max variable
+		if(arr[index] > lastMax)
+			lastMax = arr[index];
 		
-		return max;
+		return findMax(arr, index + 1, lastMax);
 	}
 
+	public static int findMax(int arr[])
+	{
+		return findMax(arr, 0, arr[0]);
+	}
+	
+	
 	public static void main(String[] args)
 	{
 		System.out.println(findMax(new int[] { 1, 2, 9, 3 }));

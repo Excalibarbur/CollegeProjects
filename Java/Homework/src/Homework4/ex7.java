@@ -14,6 +14,7 @@ public class ex7
 		return tribonacciElement(n - 1) + tribonacciElement(n - 2) + tribonacciElement(n - 3);
 	}
 	
+	
 	public static void main(String[] args)
 	{
 		System.out.println(tribonacciElement(10));

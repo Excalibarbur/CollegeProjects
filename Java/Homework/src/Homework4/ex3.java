@@ -2,39 +2,31 @@ package Homework4;
 
 public class ex3
 {
-	
-	/*
-	 * Hey Man -> hey man
-	 * (Search: man)
-	 * 
-	 * 
-	 * 
-	 * 
-	 * 
-	 * 
-	 */
+
+	public static boolean searchWord(String[] str_arr, String word, int index)
+	{
+		if(index == str_arr.length)
+			return false;
+		
+		if(str_arr[index].toLowerCase().equals(word.toLowerCase()))
+			return true;
+		
+		return searchWord(str_arr, word, index + 1);
+	}
 	
 	public static boolean searchWord(String text, String word)
 	{
 		String words[] = text.split(" ");
-		
-		if(words.length == 0 || text.equals(""))
-			return false;
-		
-		String firstWord = words[0];
-		if(firstWord.toLowerCase().equals(word))
-			return true;
-		
-		String newStr = "";
-		for(int i = 1; i < words.length; i++)
-			newStr += words[i] + ((i == words.length - 1) ? "" : " ");
-		
-		return searchWord(newStr, word);
+		return searchWord(words, word, 0);
 	}
+	
 
 	public static void main(String[] args)
 	{
 		System.out.println(searchWord("Hey man whats up", "man"));
+		System.out.println(searchWord("Hey man whats up", "dan"));
+		System.out.println(searchWord("Hey man whats up", "an"));
+		
 	}
 
 }

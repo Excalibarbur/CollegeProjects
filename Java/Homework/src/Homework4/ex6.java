@@ -3,27 +3,24 @@ package Homework4;
 public class ex6
 {
 
-	public static boolean subsetSum(int[] arr, int sum)
+	public static boolean subsetSum(int[] arr, int sum, int index, int index2)
 	{
-		if(arr.length < 2)
+		if(index >= arr.length)
 			return false;
 		
-		int first = arr[0];
+		if(arr[index] + arr[index2] == sum)
+			return true;
 		
-		for(int i = 1; i < arr.length; i++)
-		{
-			int currentNumber = arr[i];
-			if(first + currentNumber == sum)
-				return true;
-		}
-		
-		
-		int newArr[] = new int[arr.length - 1];
-		for(int i = 0; i < arr.length - 1; i++)
-			newArr[i] = arr[i + 1];
-		
-		return subsetSum(newArr, sum);
+		if(index2 + 1 >= arr.length)
+			return subsetSum(arr, sum, index + 1, 0);
+		return subsetSum(arr, sum, index, index2 + 1);
 	}
+	
+	public static boolean subsetSum(int[] arr, int sum)
+	{
+		return subsetSum(arr, sum, 0, 1);
+	}
+	
 	
 	public static void main(String[] args)
 	{
