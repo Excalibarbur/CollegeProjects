@@ -1,6 +1,6 @@
 package Homework4;
 
-public class ex3
+public class a3
 {
 
 	public static boolean searchWord(String[] str_arr, String word, int index)
@@ -23,10 +23,9 @@ public class ex3
 
 	public static void main(String[] args)
 	{
-		System.out.println(searchWord("Hey man whats up", "man"));
-		System.out.println(searchWord("Hey man whats up", "dan"));
-		System.out.println(searchWord("Hey man whats up", "an"));
-		
+		String text = "This is a test string";
+        String word = "test";
+        System.out.println("Word found: " + searchWord(text, word)); // Word found: true
 	}
 
 }

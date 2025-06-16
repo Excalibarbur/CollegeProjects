@@ -1,6 +1,6 @@
 package Homework4;
 
-public class task1
+public class b1
 {
 
 	public static int findCarOwner(int[] carNumbers, String[] owners)
@@ -33,11 +33,18 @@ public class task1
 	
 	public static void main(String[] args)
 	{
-		int[] arr_cars = { 12345, 65432, 21897, 90876, 76408 };
-		String[] arr_owners = { "adar", "Erez", "Omer", "sapir", "tamar" };
-		
-		int carNumber = findCarOwner(arr_cars, arr_owners);
-		System.out.println(carNumber);
+		int[] carNumbers = {12345, 65432, 21897, 90876, 76408};
+        String[] owners = {"adar", "Erez", "Omer", "sapir", "tamar"};
+
+        // Test the findCarOwner function
+        int carNumber = findCarOwner(carNumbers, owners);
+
+        // Display the result
+        if (carNumber != -1) {
+            System.out.println("Car number of the first owner with a valid name: " + carNumber);
+        } else {
+            System.out.println("No valid owner name found.");
+        } //Output: 21897
 	}
 
 }

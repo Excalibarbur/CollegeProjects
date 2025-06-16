@@ -2,7 +2,7 @@ package Homework4;
 
 import java.util.Arrays;
 
-public class task6
+public class b6
 {
 	
 	public static void swap(int[] arr, int i, int j)
@@ -39,7 +39,7 @@ public class task6
         int[] arr7 = {-15, -5, -2, 1, 3, 7, 15, 48, 97};
         int[] arr8 = {25, 24, 21, 19, 15, 13, 10, 7, 4};
         
-		System.out.println("Amount of swaps for arr5: " + bubbleSortReverse(arr5)); // Expected: 21
+        System.out.println("Amount of swaps for arr5: " + bubbleSortReverse(arr5)); // Expected: 21
         System.out.println("Sorted arr5: " + Arrays.toString(arr5));
 
         System.out.println("Amount of swaps for arr6: " + bubbleSortReverse(arr6)); // Expected: 15

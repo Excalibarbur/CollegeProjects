@@ -1,6 +1,6 @@
 package Homework4;
 
-public class ex1
+public class a1
 {
 	
 	public static int findMax(int arr[], int index, int lastMax)
@@ -22,7 +22,8 @@ public class ex1
 	
 	public static void main(String[] args)
 	{
-		System.out.println(findMax(new int[] { 1, 2, 9, 3 }));
+		int[] arr = {3, 32, 12, 4, 8};
+        System.out.println("Max value in array: " + findMax(arr)); // Max value in array: 32
 	}
 
 }

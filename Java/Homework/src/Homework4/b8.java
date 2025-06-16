@@ -2,7 +2,7 @@ package Homework4;
 
 import java.util.Arrays;
 
-public class task8
+public class b8
 {
 
 	public static char[] splitLeft(char[] arr)

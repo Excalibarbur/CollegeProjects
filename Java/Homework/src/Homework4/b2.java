@@ -1,6 +1,6 @@
 package Homework4;
 
-public class task2
+public class b2
 {
 
 	public static String findSubstring(String str)

@@ -1,6 +1,6 @@
 package Homework4;
 
-public class task4
+public class b4
 {
 
 	public static int ternarySearch(int[] arr, int num, int D)

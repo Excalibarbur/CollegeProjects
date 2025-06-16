@@ -1,6 +1,6 @@
 package Homework4;
 
-public class task3
+public class b3
 {
 
 	private static int jumpSearch(int[] arr, int k, int step, int index, int comparisons)

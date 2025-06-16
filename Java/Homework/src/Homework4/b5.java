@@ -2,7 +2,7 @@ package Homework4;
 
 import java.util.Arrays;
 
-public class task5
+public class b5
 {
 	public static int insertionSort(int[] arr)
 	{

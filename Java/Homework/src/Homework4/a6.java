@@ -1,6 +1,6 @@
 package Homework4;
 
-public class ex6
+public class a6
 {
 
 	public static boolean subsetSum(int[] arr, int sum, int index, int index2)
@@ -24,8 +24,13 @@ public class ex6
 	
 	public static void main(String[] args)
 	{
-		System.out.println(subsetSum(new int[] { 3, 8, 15, 97, 6 }, 9));
-		System.out.println(subsetSum(new int[] { 4, 5, 87, 2, 12, 3 }, 13));
+		int[] arr1 = {3, 8, 15, 97, 6};
+        int sum1 = 9;
+        System.out.println("Subset with sum " + sum1 + " exists: " + subsetSum(arr1, sum1)); // Subset with sum 9 exists: true
+
+        int[] arr2 = {4, 5, 87, 2, 12, 3};
+        int sum2 = 13;
+        System.out.println("Subset with sum " + sum2 + " exists: " + subsetSum(arr2, sum2)); // Subset with sum 13 exists: false
 	}
 
 }

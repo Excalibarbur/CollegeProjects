@@ -2,7 +2,7 @@ package Homework4;
 
 import java.util.Arrays;
 
-public class task7
+public class b7
 {
 
 	public static void swap(char[] arr, int i, int j)
@@ -18,7 +18,7 @@ public class task7
 			return 0;
 
 		if (i >= n - 1)
-			return bubbleSort(arr, n - 1, 0); // סוף מעבר → ירידה בשכבה
+			return bubbleSort(arr, n - 1, 0);
 
 		int count = 0;
 		if (arr[i] > arr[i + 1])
@@ -27,7 +27,7 @@ public class task7
 			count = 1;
 		}
 
-		return count + bubbleSort(arr, n, i + 1); // המשך מעבר
+		return count + bubbleSort(arr, n, i + 1);
 	}
 	
 	public static int bubbleSort(char[] arr)

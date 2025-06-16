@@ -1,6 +1,6 @@
 package Homework4;
 
-public class ex2
+public class a2
 {
 	
 	public static boolean isPalindrome(String str, int index)
@@ -25,11 +25,12 @@ public class ex2
 
 	public static void main(String[] args)
 	{
-		System.out.println(isPalindrome("adada"));
-		System.out.println(isPalindrome("adjda"));
-		System.out.println(isPalindrome("adda"));
-		System.out.println(isPalindrome("acada"));
-		
+		String str1 = "abba";
+        String str2 = "t6r6t";
+        String str3 = "hello";
+        System.out.println("Is \"" + str1 + "\" a palindrome? " + isPalindrome(str1)); // Is "abba" a palindrome? true
+        System.out.println("Is \"" + str2 + "\" a palindrome? " + isPalindrome(str2)); // Is "t6r6t" a palindrome? true
+        System.out.println("Is \"" + str3 + "\" a palindrome? " + isPalindrome(str3)); // Is "hello" a palindrome? false		
 	}
 
 }

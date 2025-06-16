@@ -1,6 +1,6 @@
 package Homework4;
 
-public class ex7
+public class a7
 {
 
 	public static int tribonacciElement(int n)
@@ -17,7 +17,8 @@ public class ex7
 	
 	public static void main(String[] args)
 	{
-		System.out.println(tribonacciElement(10));
+		int n = 10;
+        System.out.println("Tribonacci element at index " + n + ": " + tribonacciElement(n)); // Tribonacci element at index 10: 81
 	}
 
 }
